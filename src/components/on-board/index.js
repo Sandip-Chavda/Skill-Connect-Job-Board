@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import CommonForm from "../common-form";
 import {
@@ -11,6 +11,16 @@ import {
 } from "@/utils";
 import { useUser } from "@clerk/nextjs";
 import { createProfileAction } from "@/actions";
+import { createClient } from "@supabase/supabase-js";
+
+// SupaBase Client Making
+
+const supabaseClient = createClient(
+  "https://xtwnuaudbpcbdmuxzgee.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh0d251YXVkYnBjYmRtdXh6Z2VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgxOTQ5MjEsImV4cCI6MjAzMzc3MDkyMX0.Bh0s1wdJ4kGePmxvRm-9rNOUjjKgq6QQXYsh6QP_FVY"
+);
+
+// SupaBase Client Making
 
 const OnBoard = () => {
   const [currentTab, setCurrentTab] = useState("candidate");
@@ -24,9 +34,38 @@ const OnBoard = () => {
   );
   // console.log(candidateFormData);
 
+  const [file, setFile] = useState(null);
+
   const currentAuthUser = useUser();
   // console.log(currentAuthUser);
   const { user } = currentAuthUser;
+
+  function handleFileChange(event) {
+    event.preventDefault();
+    console.log(event.target.files);
+    setFile(event.target.files[0]);
+  }
+
+  async function handleUploadPdfToSupabase() {
+    const { data, error } = await supabaseClient.storage
+      .from("Skill-Connect")
+      .upload(`/public/${file.name}`, file, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+    console.log(data, error);
+
+    if (data) {
+      setCandidateFormData({
+        ...candidateFormData,
+        resume: data.path,
+      });
+    }
+  }
+
+  useEffect(() => {
+    if (file) handleUploadPdfToSupabase();
+  }, [file]);
 
   function handleTabChange(value) {
     setCurrentTab(value);
@@ -41,14 +80,31 @@ const OnBoard = () => {
     );
   }
 
+  function handleCandidateFormValid() {
+    return Object.keys(candidateFormData).every(
+      (key) => candidateFormData[key].trim() !== ""
+    );
+  }
+
+  console.log(candidateFormData);
+
   async function createProfile() {
-    const data = {
-      recruiterInfo: recruiterFormData,
-      role: "recruiter",
-      isPremiumUser: false,
-      userId: user?.id,
-      email: user?.primaryEmailAddress?.emailAddress,
-    };
+    const data =
+      currentTab === "candidate"
+        ? {
+            candidateInfo: candidateFormData,
+            role: "candidate",
+            isPremiumUser: false,
+            userId: user?.id,
+            email: user?.primaryEmailAddress?.emailAddress,
+          }
+        : {
+            recruiterInfo: recruiterFormData,
+            role: "recruiter",
+            isPremiumUser: false,
+            userId: user?.id,
+            email: user?.primaryEmailAddress?.emailAddress,
+          };
 
     await createProfileAction(data, "/onboard");
   }
@@ -75,6 +131,9 @@ const OnBoard = () => {
             buttonText={"Save as Candidate"}
             formData={candidateFormData}
             setFormData={setCandidateFormData}
+            handleFileChange={handleFileChange}
+            isBtnDisabled={!handleCandidateFormValid()}
+            action={createProfile}
           />
         </TabsContent>
         {/* candidate form */}

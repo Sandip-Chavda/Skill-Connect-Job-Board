@@ -95,7 +95,7 @@ export const candidateOnboardFormControls = [
   },
   {
     label: "College Location",
-    name: "collegeLocaation",
+    name: "collegeLocation",
     placeholder: "College location",
     componentType: "input",
   },
