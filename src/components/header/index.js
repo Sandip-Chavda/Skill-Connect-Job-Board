@@ -7,7 +7,7 @@ import { RiMenuUnfold3Fill } from "react-icons/ri";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 
-const Header = ({ user }) => {
+const Header = ({ user, profileInfo }) => {
   const menuItems = [
     {
       label: "Home",
@@ -32,8 +32,8 @@ const Header = ({ user }) => {
     {
       label: "Activity",
       path: "/activity",
-      show: user,
-      // show: profileInfo?.role === "candidate",
+      // show: user,
+      show: profileInfo?.role === "candidate",
     },
     {
       // label: "Companies",
