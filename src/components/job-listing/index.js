@@ -5,7 +5,8 @@ import PostNewJob from "../post-new-job";
 import RecruiterJobCard from "../recruiter-job-card";
 import CandidateJobCard from "../candidate-job-card";
 
-const JobListing = ({ user, profileInfo, jobList }) => {
+const JobListing = ({ user, profileInfo, jobList, jobApplications }) => {
+  console.log(jobApplications);
   return (
     <div>
       <div className="mx-auto max-w-7xl ">
@@ -31,9 +32,19 @@ const JobListing = ({ user, profileInfo, jobList }) => {
                   {jobList && jobList.length > 0
                     ? jobList.map((jobItem, i) =>
                         profileInfo?.role === "candidate" ? (
-                          <CandidateJobCard key={i} jobItem={jobItem} />
+                          <CandidateJobCard
+                            profileInfo={profileInfo}
+                            key={i}
+                            jobItem={jobItem}
+                            jobApplications={jobApplications}
+                          />
                         ) : (
-                          <RecruiterJobCard key={i} jobItem={jobItem} />
+                          <RecruiterJobCard
+                            profileInfo={profileInfo}
+                            key={i}
+                            jobItem={jobItem}
+                            jobApplications={jobApplications}
+                          />
                         )
                       )
                     : null}

@@ -14,9 +14,27 @@ import {
 } from "../ui/drawer";
 import { IoIosSend } from "react-icons/io";
 import { MdCancel } from "react-icons/md";
+import { createJobApplicationAction } from "@/actions";
 
-const CandidateJobCard = ({ jobItem }) => {
+const CandidateJobCard = ({ jobItem, profileInfo, jobApplications }) => {
   const [showJobDetailsDrawer, setShowJobDetailsDrawer] = useState(false);
+  console.log(jobApplications);
+
+  async function handleJobApply() {
+    createJobApplicationAction(
+      {
+        recruiterUserID: jobItem?.recruiterId,
+        name: profileInfo?.candidateInfo?.name, // candidate name
+        email: profileInfo?.email, // candidate email
+        candidateUserID: profileInfo?.userId,
+        status: ["Applied"],
+        jobID: jobItem?._id,
+        jobAppliedDate: new Date().toLocaleDateString(),
+      },
+      "/jobs"
+    );
+    setShowJobDetailsDrawer(false);
+  }
 
   return (
     <Fragment>
@@ -45,8 +63,22 @@ const CandidateJobCard = ({ jobItem }) => {
                 {jobItem?.title}
               </DrawerTitle>
               <div className="flex gap-3 ">
-                <Button className="group flex gap-1.5 h-11 items-center justify-center px-5">
-                  Apply{" "}
+                <Button
+                  onClick={handleJobApply}
+                  disabled={
+                    jobApplications.findIndex(
+                      (item) => item.jobID === jobItem?._id
+                    ) > -1
+                      ? true
+                      : false
+                  }
+                  className="group disabled:opacity-80  flex gap-1.5 h-11 items-center justify-center px-5"
+                >
+                  {jobApplications.findIndex(
+                    (item) => item.jobID === jobItem?._id
+                  ) > -1
+                    ? "Applied"
+                    : "Apply"}
                   <IoIosSend
                     className="group-hover:pl-1 group-hover:-pr-2 transition-all duration-300"
                     size={20}
@@ -78,7 +110,7 @@ const CandidateJobCard = ({ jobItem }) => {
             {jobItem?.skills.split(",").map((skillItem, i) => (
               <div
                 key={i}
-                className="w-[100px] flex justify-center items-center h-[35px] bg-black  rounded-[4px]"
+                className="w-[100px] flex justify-center items-center h-[35px] bg-black  rounded-[4px] hover:scale-105 transition-all duration-200"
               >
                 <h2 className="text-[13px] text-white capitalize font-medium">
                   {skillItem}
