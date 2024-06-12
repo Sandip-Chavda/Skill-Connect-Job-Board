@@ -3,6 +3,7 @@
 import React from "react";
 import PostNewJob from "../post-new-job";
 import RecruiterJobCard from "../recruiter-job-card";
+import CandidateJobCard from "../candidate-job-card";
 
 const JobListing = ({ user, profileInfo, jobList }) => {
   return (
@@ -30,7 +31,7 @@ const JobListing = ({ user, profileInfo, jobList }) => {
                   {jobList && jobList.length > 0
                     ? jobList.map((jobItem, i) =>
                         profileInfo?.role === "candidate" ? (
-                          <p key={i}>candidate jobs</p>
+                          <CandidateJobCard key={i} jobItem={jobItem} />
                         ) : (
                           <RecruiterJobCard key={i} jobItem={jobItem} />
                         )
