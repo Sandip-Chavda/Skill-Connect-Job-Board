@@ -6,6 +6,7 @@ const isProtectedRoute = createRouteMatcher([
   "/onboard",
   "/membership",
   "/jobs",
+  "/account",
 ]); //add all other protected routes here ex. activity, membership, account, companies, feed etc
 
 export default clerkMiddleware((auth, req) => {

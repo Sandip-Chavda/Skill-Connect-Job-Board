@@ -25,7 +25,7 @@ const ProfileSchema = new mongoose.Schema({
     totalExperience: String,
     college: String,
     collegeLocation: String,
-    gratuatedYear: String,
+    graduatedYear: String,
     linkedinProfile: String,
     githubProfile: String,
     resume: String,

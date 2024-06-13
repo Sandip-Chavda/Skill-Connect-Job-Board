@@ -140,6 +140,25 @@ export const initialCandidateFormData = {
   //   isPremiumUser: false,
 };
 
+export const initialCandidateAccountFormData = {
+  // resume: "",
+  name: "",
+  currentJobLocation: "",
+  preferedJobLocation: "",
+  currentSalary: "",
+  noticePeriod: "",
+  skills: "",
+  currentCompany: "",
+  previousCompanies: "",
+  totalExperience: "",
+  college: "",
+  collegeLocation: "",
+  graduatedYear: "",
+  linkedinProfile: "",
+  githubProfile: "",
+  //   isPremiumUser: false,
+};
+
 export const postNewJobFormControls = [
   {
     label: "Company Name",
