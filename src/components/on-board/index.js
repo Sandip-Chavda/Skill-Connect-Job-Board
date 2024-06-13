@@ -48,7 +48,7 @@ const OnBoard = () => {
 
   async function handleUploadPdfToSupabase() {
     const { data, error } = await supabaseClient.storage
-      .from("Skill-Connect")
+      .from("Skill-Connect-Public")
       .upload(`/public/${file.name}`, file, {
         cacheControl: "3600",
         upsert: false,
