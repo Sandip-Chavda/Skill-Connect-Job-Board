@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { RiMenuUnfold3Fill } from "react-icons/ri";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
+import Image from "next/image";
 
 const Header = ({ user, profileInfo }) => {
   const menuItems = [
@@ -95,8 +96,17 @@ const Header = ({ user, profileInfo }) => {
         {/* For mobile screen */}
 
         {/* Larger screen navbar */}
-        <Link className="hidden lg:flex mr-6" href={"/"}>
-          Skill Connect
+        <Link className="hidden gap-1 lg:flex mr-6" href={"/"}>
+          <Image
+            className="w-16"
+            src="./logo.svg"
+            alt="logo"
+            width={50}
+            height={50}
+          />
+          <span className="text-2xl font-bold bg-gradient-to-r from-red-600 via-green-500 to-blue-500 inline-block text-transparent bg-clip-text">
+            Skill Connect
+          </span>
         </Link>
 
         <nav className="ml-auto hidden lg:flex gap-6">
