@@ -1,4 +1,7 @@
 import qs from "query-string";
+import { IoStarSharp } from "react-icons/io5";
+import { GiBarbedStar } from "react-icons/gi";
+import { GiStarFormation } from "react-icons/gi";
 
 export const recruiterOnboardFormControls = [
   {
@@ -254,3 +257,30 @@ export function formUrlQuery({ params, dataToAdd }) {
     }
   );
 }
+
+export const membershipPlans = [
+  {
+    heading: "Starter Pack",
+    price: "599",
+    type: "basic",
+    icon: <IoStarSharp size={30} />,
+    description:
+      "Essential plan for candidates and recruiters to kickstart their career or hiring journey.",
+  },
+  {
+    heading: "Growth Bundle",
+    price: "1899",
+    type: "teams",
+    icon: <GiBarbedStar size={30} />,
+    description:
+      "Advanced features for candidates and teams to streamline job searches and hiring processes",
+  },
+  {
+    heading: "Elite Experience",
+    price: "3599",
+    type: "enterprise",
+    icon: <GiStarFormation size={30} />,
+    description:
+      "Comprehensive solutions for candidates and enterprises to manage premium job.",
+  },
+];
