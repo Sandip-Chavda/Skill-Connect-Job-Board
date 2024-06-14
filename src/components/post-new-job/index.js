@@ -8,7 +8,7 @@ import CommonForm from "../common-form";
 import { initialPostNewJobFormData, postNewJobFormControls } from "@/utils";
 import { postNewJobAction } from "@/actions";
 
-const PostNewJob = ({ user, profileInfo }) => {
+const PostNewJob = ({ user, profileInfo, jobList }) => {
   const [showJobDialog, setShowJobDialog] = useState(false);
   const [jobFormData, setJobFormData] = useState({
     ...initialPostNewJobFormData,

@@ -37,10 +37,10 @@ const Header = ({ user, profileInfo }) => {
       show: profileInfo?.role === "candidate",
     },
     {
-      // label: "Companies",
-      // path: "/companies",
+      label: "Companies",
+      path: "/companies",
       // show: true,
-      // show: profileInfo?.role === "candidate",
+      show: profileInfo?.role === "candidate",
     },
     {
       label: "Jobs",
