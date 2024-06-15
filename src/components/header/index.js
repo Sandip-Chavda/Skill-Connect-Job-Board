@@ -15,11 +15,11 @@ const Header = ({ user, profileInfo }) => {
       path: "/",
       show: true,
     },
-    // {
-    //   label: "Feed",
-    //   path: "/feed",
-    //   show: profileInfo,
-    // },
+    {
+      label: "Feed",
+      path: "/feed",
+      show: profileInfo,
+    },
     {
       label: "Login",
       path: "/sign-in",
@@ -45,20 +45,20 @@ const Header = ({ user, profileInfo }) => {
     {
       label: "Jobs",
       path: "/jobs",
-      show: user,
-      // show: profileInfo,
+      // show: user,
+      show: profileInfo,
     },
     {
       label: "Membership",
       path: "/membership",
-      show: user,
-      // show: profileInfo,
+      // show: user,
+      show: profileInfo,
     },
     {
       label: "Account",
       path: "/account",
-      show: user,
-      // show: profileInfo,
+      // show: user,
+      show: profileInfo,
     },
   ];
 

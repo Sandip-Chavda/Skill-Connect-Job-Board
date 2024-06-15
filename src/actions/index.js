@@ -2,6 +2,7 @@
 
 import connectToDB from "@/database";
 import Application from "@/models/application";
+import Feed from "@/models/feed";
 import Job from "@/models/job";
 import Profile from "@/models/profile";
 import { revalidatePath } from "next/cache";
@@ -147,6 +148,39 @@ export async function updateProfileAction(data, pathToRevalidate) {
       memberShipEndDate,
       recruiterInfo,
       candidateInfo,
+    },
+    { new: true }
+  );
+
+  revalidatePath(pathToRevalidate);
+}
+
+export async function createFeedPostAction(data, pathToRevalidate) {
+  await connectToDB();
+  await Feed.create(data);
+  revalidatePath(pathToRevalidate);
+}
+
+export async function fetchAllFeedPostsAction() {
+  await connectToDB();
+  const result = await Feed.find({});
+
+  return JSON.parse(JSON.stringify(result));
+}
+
+export async function updateFeedPostAction(data, pathToRevalidate) {
+  await connectToDB();
+  const { userId, userName, message, image, likes, _id } = data;
+  await Feed.findOneAndUpdate(
+    {
+      _id: _id,
+    },
+    {
+      userId,
+      userName,
+      image,
+      message,
+      likes,
     },
     { new: true }
   );
