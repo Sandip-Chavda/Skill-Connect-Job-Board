@@ -1,6 +1,6 @@
 ```bash
 -- To Do:
- - - - - have to change Supabse thing again and change mongodburl after project end
+ - - - - have to change Supabse thing again and change after project end
 ```
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

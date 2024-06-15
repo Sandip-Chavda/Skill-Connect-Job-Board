@@ -9,10 +9,10 @@ import {
 } from "@/actions";
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseClient = createClient(
-  "https://xtwnuaudbpcbdmuxzgee.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh0d251YXVkYnBjYmRtdXh6Z2VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgxOTQ5MjEsImV4cCI6MjAzMzc3MDkyMX0.Bh0s1wdJ4kGePmxvRm-9rNOUjjKgq6QQXYsh6QP_FVY"
-);
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const CandidateList = ({
   currentCandidateDetails,
