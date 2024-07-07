@@ -118,7 +118,7 @@ const SkeletonTwo = () => {
         style={{
           maxWidth: Math.random() * (100 - 40) + 40 + "%",
         }}
-        className="flex flex-row rounded-full  p-2  items-center space-x-2 w-full"
+        className="flex flex-row rounded-full p-2  items-center  w-full"
       >
         <Image
           alt="logo"
@@ -160,7 +160,7 @@ const SkeletonThree = () => {
       //   repeat: Infinity,
       //   repeatType: "reverse",
       // }}
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col"
       // style={{
       //   background:
       //     "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
@@ -173,9 +173,9 @@ const SkeletonThree = () => {
         autoPlay
         muted
         loop
-        className="object-fit"
+        className="object-cover rounded-lg !h-full md:mt-5"
       >
-        <source src="/globeanimation.mp4" type="video/mp4" />
+        <source src="/globeanimation1.mp4" type="video/mp4" />
         <track
           src="/path/to/captions.vtt"
           kind="subtitles"
@@ -193,7 +193,7 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   const first = {
     initial: {
-      x: 20,
+      x: 35,
       rotate: -5,
     },
     hover: {
@@ -203,7 +203,7 @@ const SkeletonFour = () => {
   };
   const second = {
     initial: {
-      x: -20,
+      x: -35,
       rotate: 5,
     },
     hover: {
@@ -218,55 +218,93 @@ const SkeletonFour = () => {
       whileHover="hover"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
     >
-      <motion.div
+      {/* <motion.div
         variants={first}
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+      > */}
+      <motion.div
+        variants={first}
+        className="h-full w-1/3 rounded-2xl bg-red-100 p-4 dark:bg-black dark:border-white/[0.1] border border-red-500 flex flex-col items-center justify-center"
       >
         <Image
           src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="rounded-full h-16 w-16"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
+        <p
+          className={cn(
+            "sm:text-sm text-xs text-center font-semibold text-neutral-700 mt-4",
+            font.className
+          )}
+        >
+          {/* Students can leverage our platform to showcase their skills
+          effectively & get hired. */}
+          Students can effectively showcase skills and get hired.
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
+        <p
+          className={cn(
+            "border border-red-950 bg-red-400/75 dark:bg-red-900/20 text-red-950 text-xs rounded-full px-3 py-1.5 font-semibold mt-4",
+            font.className
+          )}
+        >
+          Skill Showcase
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-lime-200 p-4 dark:bg-black dark:border-white/[0.1] border border-lime-500 flex flex-col items-center justify-center">
         <Image
           src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="rounded-full h-16 w-16"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+        <p
+          className={cn(
+            "sm:text-sm text-xs text-center font-semibold text-neutral-700 mt-4",
+            font.className
+          )}
+        >
+          Discover and hire top-tier talent through our platform
         </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
+        <p
+          className={cn(
+            "border border-lime-700 bg-lime-500/45 font-semibold dark:bg-green-900/20 text-lime-800 text-xs rounded-full px-3 py-1.5 mt-4",
+            font.className
+          )}
+        >
+          Hire Talents
         </p>
       </motion.div>
+
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-indigo-200 p-4 dark:bg-black dark:border-white/[0.1] border border-indigo-700 flex flex-col items-center justify-center"
       >
         <Image
           src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="rounded-full h-16 w-16"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
+        <p
+          className={cn(
+            "sm:text-sm text-xs text-center font-semibold text-neutral-700 mt-4",
+            font.className
+          )}
+        >
+          Share latest skills and jobs through posts & grow connections.
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
+        <p
+          className={cn(
+            "border border-indigo-500 bg-indigo-300 dark:bg-orange-900/20 text-indigo-800 text-xs font-semibold rounded-full px-3 py-1.5 mt-4",
+            font.className
+          )}
+        >
+          Socialize
         </p>
       </motion.div>
     </motion.div>
@@ -358,31 +396,38 @@ const items = [
       </span>
     ),
     header: <SkeletonTwo />,
-    className: "md:col-span-1",
+    className: "md:col-span-1 bg-[#EFEEF3]",
     // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
 
   {
-    title: "Contextual Suggestions",
-    description: (
-      <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
-      </span>
-    ),
+    // title: "Contextual Suggestions",
+    // description: (
+    //   <span className="text-sm">
+    //     Get AI-powered suggestions based on your writing context.
+    //   </span>
+    // ),
     header: <SkeletonThree />,
-    className: "md:col-span-1",
+    className: "md:col-span-1 bg-black drak:bg-white",
     // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
 
   {
-    title: "Sentiment Analysis",
+    title: (
+      <p className={cn("text-white text-xl", font.className)}>
+        Find all you need in one place for seamless access
+      </p>
+    ),
     description: (
-      <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+      <span className={cn("text-sm text-neutral-300/80")}>
+        Access all your essential resources conveniently in one place for
+        seamless workflow and enhanced productivity.Effortlessly manage and
+        access all your necessities from a single, user-friendly platform for
+        maximum efficiency.
       </span>
     ),
     header: <SkeletonFour />,
-    className: "md:col-span-3",
+    className: "md:col-span-3 h-[430px] bg-black",
     // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -394,7 +439,7 @@ const items = [
       </span>
     ),
     header: <SkeletonFive />,
-    className: "md:col-span-1",
+    className: "md:col-span-1 h-[430px] bg-black",
     // icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
 ];
