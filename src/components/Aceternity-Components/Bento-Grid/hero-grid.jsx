@@ -14,6 +14,9 @@ import { BentoGrid, BentoGridItem } from "./bento-grid";
 import { cn } from "@/utils/cn";
 import { Playfair_Display } from "next/font/google";
 import HeroButton from "../hero-button/button";
+import { FaGraduationCap } from "react-icons/fa6";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { MdConnectWithoutContact } from "react-icons/md";
 
 const font = Playfair_Display({
   subsets: ["latin"],
@@ -226,13 +229,14 @@ const SkeletonFour = () => {
         variants={first}
         className="h-full w-1/3 rounded-2xl bg-red-100 p-4 dark:bg-black dark:border-white/[0.1] border border-red-500 flex flex-col items-center justify-center"
       >
-        <Image
-          src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
+        {/* <Image
+          src="/students.jpg"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-16 w-16"
-        />
+        /> */}
+        <FaGraduationCap className="rounded-full h-20 w-20 text-red-700/80" />
         <p
           className={cn(
             "sm:text-sm text-xs text-center font-semibold text-neutral-700 mt-4",
@@ -254,13 +258,15 @@ const SkeletonFour = () => {
       </motion.div>
 
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-lime-200 p-4 dark:bg-black dark:border-white/[0.1] border border-lime-500 flex flex-col items-center justify-center">
-        <Image
+        {/* <Image
           src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-16 w-16"
-        />
+        /> */}
+
+        <BsPersonWorkspace className=" h-20 w-20 text-lime-700" />
         <p
           className={cn(
             "sm:text-sm text-xs text-center font-semibold text-neutral-700 mt-4",
@@ -283,13 +289,14 @@ const SkeletonFour = () => {
         variants={second}
         className="h-full w-1/3 rounded-2xl bg-indigo-200 p-4 dark:bg-black dark:border-white/[0.1] border border-indigo-700 flex flex-col items-center justify-center"
       >
-        <Image
+        {/* <Image
           src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-16 w-16"
-        />
+        /> */}
+        <MdConnectWithoutContact className="h-20 w-20 text-indigo-500" />
         <p
           className={cn(
             "sm:text-sm text-xs text-center font-semibold text-neutral-700 mt-4",
@@ -317,10 +324,10 @@ const SkeletonFive = () => {
       x: 0,
     },
     animate: {
-      x: 10,
-      rotate: 5,
+      x: 12,
+      rotate: 7,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
       },
     },
   };
@@ -329,10 +336,10 @@ const SkeletonFive = () => {
       x: 0,
     },
     animate: {
-      x: -10,
-      rotate: -5,
+      x: -12,
+      rotate: -7,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
       },
     },
   };
@@ -341,31 +348,63 @@ const SkeletonFive = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-4"
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
+        className="flex flex-row rounded-2xl dark:border-white/[0.2] p-2  items-center space-x-2 dark:bg-black "
       >
         <Image
-          src="https://utfs.io/f/4c9f7186-8ad0-4680-aece-a5abea608705-k6t10e.png"
+          src="/user1.jpg"
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="rounded-full h-20 w-20"
         />
-        <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
+        <div className={cn("text-sm text-neutral-100", font.className)}>
+          I got the 13 LPA offer letter from TCS.
+        </div>
       </motion.div>
+
       <motion.div
+        variants={variantsSecond}
+        className="flex flex-row rounded-2xl dark:border-white/[0.2] p-2  items-center space-x-2 dark:bg-black "
+      >
+        <div className={cn("text-sm text-neutral-100", font.className)}>
+          I start my career with a Microsoft intern.
+        </div>
+        <Image
+          src="/user2.jpg"
+          alt="avatar"
+          height="100"
+          width="100"
+          className="rounded-full h-20 w-20"
+        />
+      </motion.div>
+
+      <motion.div
+        variants={variants}
+        className="flex flex-row rounded-2xl dark:border-white/[0.2] p-2  items-center space-x-2 dark:bg-black "
+      >
+        <Image
+          src="/user3.jpg"
+          alt="avatar"
+          height="100"
+          width="100"
+          className="rounded-full h-20 w-20"
+        />
+        <div className={cn("text-sm text-neutral-100", font.className)}>
+          I kickstarted my career at a dynamic startup.
+        </div>
+      </motion.div>
+
+      {/* <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
         <p className="text-xs text-neutral-500">Use PHP.</p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
@@ -396,7 +435,7 @@ const items = [
       </span>
     ),
     header: <SkeletonTwo />,
-    className: "md:col-span-1 bg-[#EFEEF3]",
+    className: "md:col-span-1 bg-[#EFEEF3] cursor-pointer",
     // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -427,19 +466,23 @@ const items = [
       </span>
     ),
     header: <SkeletonFour />,
-    className: "md:col-span-3 h-[430px] bg-black",
+    className: "md:col-span-3 h-[430px] bg-black cursor-pointer",
     // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
   {
-    title: "Text Summarization",
-    description: (
-      <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
-      </span>
+    title: (
+      <p className={cn("text-white text-lg", font.className)}>
+        Recent job achievements
+      </p>
     ),
+    // description: (
+    //   <span className="text-sm">
+    //     Summarize your lengthy documents with AI technology.
+    //   </span>
+    // ),
     header: <SkeletonFive />,
-    className: "md:col-span-1 h-[430px] bg-black",
+    className: "md:col-span-1 h-[430px] bg-black cursor-pointer",
     // icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
 ];

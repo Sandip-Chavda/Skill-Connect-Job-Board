@@ -1,8 +1,8 @@
 import { fetchProfileAction } from "@/actions";
 import { BentoGridThirdDemo } from "@/components/Aceternity-Components/Bento-Grid/hero-grid";
-import HomepageButtonControls from "@/components/homepage-button-controls";
+// import HomepageButtonControls from "@/components/homepage-button-controls";
 import { currentUser } from "@clerk/nextjs/server";
-import Image from "next/image";
+// import Image from "next/image";
 import { redirect } from "next/navigation";
 import { Fragment } from "react";
 
