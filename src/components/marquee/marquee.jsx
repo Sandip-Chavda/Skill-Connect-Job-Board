@@ -3,7 +3,7 @@ import React from "react";
 
 const Marquee = () => {
   return (
-    <div className="flex overflow-hidden space-x-5 md:space-x-16 rounded-full mt-14 md:h-[80px] md:mx-auto md:!w-[1000px] h-[60px] bg-gray-100 group">
+    <div className="flex overflow-hidden space-x-5 md:space-x-16 rounded-3xl mt-14 md:h-[80px] md:mx-auto md:!w-[1000px] h-[60px] bg-gray-100 group">
       <div className="flex space-x-5 md:space-x-16 animate-loop-scroll">
         <Image
           src="/microsoft.svg"

@@ -1,5 +1,6 @@
 import { fetchProfileAction } from "@/actions";
 import { BentoGridThirdDemo } from "@/components/Aceternity-Components/Bento-Grid/hero-grid";
+import { ConnectWithUs } from "@/components/Aceternity-Components/connect-with-us/hero-grid";
 import HeroHeading from "@/components/Aceternity-Components/hero-heading/heroheading";
 import SkillHire from "@/components/Aceternity-Components/skill-hire/skill-hire";
 // import Header from "@/components/header";
@@ -30,7 +31,7 @@ export default async function Home() {
 
       <section className="relative w-full h-full -mb-20">
         <div className="w-full h-full relative">
-          <div className="flex flex-col-reverse items-center justify-center lg:flex-row mt-28">
+          <div className="flex flex-col-reverse items-center justify-center lg:flex-row md:mt-36 mt-24">
             <HeroHeading title={"Companies Who Used Our Platform"} />
           </div>
         </div>
@@ -46,9 +47,25 @@ export default async function Home() {
 
       <section className="relative w-full h-full pb-10 ">
         <div className="w-full h-full relative">
-          <div className="flex flex-col-reverse lg:flex-row gap-10 mt-14">
+          <div className="flex flex-col-reverse lg:flex-row gap-10 mt-24">
             {/* <BentoGridThirdDemo /> */}
             <SkillHire />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full h-full -mb-6">
+        <div className="w-full h-full relative">
+          <div className="flex flex-col-reverse items-center justify-center lg:flex-row mt-14">
+            <HeroHeading title={"Connect with me"} />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full h-full pb-10 ">
+        <div className="w-full h-full relative">
+          <div className="flex flex-col-reverse lg:flex-row gap-10 mt-24">
+            <ConnectWithUs />
           </div>
         </div>
       </section>
