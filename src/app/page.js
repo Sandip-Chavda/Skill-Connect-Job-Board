@@ -1,7 +1,8 @@
 import { fetchProfileAction } from "@/actions";
 import { BentoGridThirdDemo } from "@/components/Aceternity-Components/Bento-Grid/hero-grid";
 import HeroHeading from "@/components/Aceternity-Components/hero-heading/heroheading";
-import Header from "@/components/header";
+import SkillHire from "@/components/Aceternity-Components/skill-hire/skill-hire";
+// import Header from "@/components/header";
 import Marquee from "@/components/marquee/marquee";
 // import HomepageButtonControls from "@/components/homepage-button-controls";
 import { currentUser } from "@clerk/nextjs/server";
@@ -39,6 +40,15 @@ export default async function Home() {
         <div className="w-full h-full relative">
           <div className="flex flex-col-reverse lg:flex-row gap-10 mt-16">
             <Marquee />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full h-full pb-10 ">
+        <div className="w-full h-full relative">
+          <div className="flex flex-col-reverse lg:flex-row gap-10 mt-14">
+            {/* <BentoGridThirdDemo /> */}
+            <SkillHire />
           </div>
         </div>
       </section>

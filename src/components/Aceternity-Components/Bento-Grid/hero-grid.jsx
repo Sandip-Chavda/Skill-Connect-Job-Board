@@ -249,11 +249,11 @@ const SkeletonFour = () => {
         </p>
         <p
           className={cn(
-            "border border-red-950 bg-red-400/75 dark:bg-red-900/20 text-red-950 text-xs rounded-full px-3 py-1.5 font-semibold mt-4",
+            "border border-red-950 bg-red-400/75 dark:bg-red-900/20 text-red-950 md:text-xs text-[9px] rounded-lg md:rounded-full px-1 py-1 md:px-3 md:py-1.5 font-semibold mt-4 flex gap-1",
             font.className
           )}
         >
-          Skill Showcase
+          Skill <span className="hidden md:flex">Showcase</span>
         </p>
       </motion.div>
 
@@ -277,11 +277,11 @@ const SkeletonFour = () => {
         </p>
         <p
           className={cn(
-            "border border-lime-700 bg-lime-500/45 font-semibold dark:bg-green-900/20 text-lime-800 text-xs rounded-full px-3 py-1.5 mt-4",
+            "border border-lime-700 bg-lime-500/45 font-semibold dark:bg-green-900/20 text-lime-800 md:text-xs text-[9px] rounded-lg md:rounded-full md:px-3 md:py-1.5 p-1 mt-4 flex gap-1",
             font.className
           )}
         >
-          Hire Talents
+          Hire <span className="hidden md:flex">Talents</span>
         </p>
       </motion.div>
 
@@ -307,11 +307,11 @@ const SkeletonFour = () => {
         </p>
         <p
           className={cn(
-            "border border-indigo-500 bg-indigo-300 dark:bg-orange-900/20 text-indigo-800 text-xs font-semibold rounded-full px-3 py-1.5 mt-4",
+            "border border-indigo-500 bg-indigo-300 dark:bg-orange-900/20 text-indigo-800 md:text-xs text-[9px] font-semibold rounded-lg md:rounded-full md:px-3 md:py-1.5 p-1 mt-4",
             font.className
           )}
         >
-          Socialize
+          Social
         </p>
       </motion.div>
     </motion.div>

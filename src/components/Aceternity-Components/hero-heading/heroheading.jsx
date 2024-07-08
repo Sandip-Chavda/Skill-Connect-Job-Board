@@ -13,7 +13,7 @@ const HeroHeading = ({ title }) => {
       <div className="flex flex-col items-center justify-center gap-y-2">
         <div
           className={cn(
-            "md:text-3xl text-2xl text-black border-neutral-700 rounded-r-full rounded-l-full p-2 border-l-2 border-r-2",
+            "md:text-3xl text-xl text-black border-neutral-700 rounded-r-full rounded-l-full px-4 border-l-2 border-r-2",
             font.className
           )}
         >
