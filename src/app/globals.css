@@ -92,3 +92,9 @@ body::-webkit-scrollbar-thumb {
   ); /* Gradient from top to bottom */
   outline: 1px solid slategrey;
 }
+
+/* @layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+} */
