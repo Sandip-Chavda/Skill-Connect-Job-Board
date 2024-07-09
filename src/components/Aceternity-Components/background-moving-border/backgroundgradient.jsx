@@ -28,7 +28,7 @@ export function BackgroundGradientDemo() {
   };
 
   const redirectToPremium = () => {
-    router.push("/membership");
+    router.push("/sign-in");
   };
 
   return (

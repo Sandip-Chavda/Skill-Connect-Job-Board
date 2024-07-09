@@ -7,7 +7,7 @@ const HeroButton = () => {
   const router = useRouter();
 
   const postJobButton = () => {
-    router.push("/jobs");
+    router.push("/sign-in");
   };
 
   return (

@@ -101,5 +101,5 @@ body::-webkit-scrollbar-thumb {
 
 html,
 body:root {
-  overflow: hidden;
+  overflow-x: hidden;
 }
