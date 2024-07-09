@@ -2,31 +2,39 @@
 
 - **Skill Connect** is a dynamic job board application built with React.js, Next.js, Tailwind CSS, JavaScript, Framer Motion, Shadcn UI, Aeternity UI, Clerk, Supabase and MongoDB. Students can register profiles, apply for jobs, track application statuses, and engage with posts in a feed by sharing and liking. Recruiters can register, post jobs, and monitor application statuses. The platform also offers premium plans with additional benefits, enhancing the job search and recruitment experience.
 
+## Connect me on 🌐:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sandip-chavda-86704a2aa) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/@SandipC70731202) 
+
+
 ## Videos & Images
 
 - ## Videos
 
-- ### Student Login
+- #### Recruiter Login
 
-- ### Recruiter Login
+https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/b6ceda66-bdb4-4d6b-8cdf-14344db7f0b3
+
+- #### Student Login
+
+https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/e195a63e-6c40-4282-a6e3-97bf4d7a1ecd
 
 - ## Images
 
-| Jobs For Student | Jobs For Recruiter | Post New Job |
+| Jobs For Student | Jobs of Recruiter | Post New Job |
 | ---------------- | ------------------ | ------------ |
-| image1           | image2             | image3       |
+| ![All jobs for students](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/e6d716ed-64a8-4ed6-899f-a2c7c1f95694) |  ![Recruiter Dashboard](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/b163a270-98c4-4a34-8dc9-52af28b783fd) | ![Post new job](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/1cf1e963-ca7e-4640-96d7-6ad4d32984f4) |
 
 | Student Job Application | Student Applied Jobs | Recruiter Job Monitor |
 | ----------------------- | -------------------- | --------------------- |
-| image3                  | image4               | image3                |
+| ![Job Application](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/a9937aa2-b2e5-41c9-9b1d-205b35465600) | ![Applied Jobs](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/c7a4277d-30d1-4010-ab6f-8f7e4c89296c) | ![Recruiter Job monitor](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/f60e483d-9f33-464a-979d-1b0ae4c615e9) |
 
 | Jobs by Companies | Jobs by Categories | Feed Page |
 | ----------------- | ------------------ | --------- |
-| image5            | image6             | image3    |
+| ![Jobs by companies](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/85184dda-1267-4c4c-9aa4-323204ed3afc) | ![Selected by Category](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/4b383149-64ae-40c6-9d13-d29927c27078) | ![Feed Page](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/81755a16-7b42-421e-a78e-28c2222d7095) |
 
-| New Feed Post | Membership | Login  |
+| Add New Feed Post | Membership | Login  |
 | ------------- | ---------- | ------ |
-| image5        | image6     | image3 |
+| ![Add New Post](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/eb8ea695-bc4e-4043-a4e5-1a90ddea2079) | ![Membership](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/76161085-6a2a-4067-b8ea-c713c6b40c02) | ![Login](https://github.com/Sandip-Chavda/Skill-Connect-Job-Board/assets/140686165/0421628d-1191-4bac-86b0-3860150ceee3) |
 
 ## Key Features
 
