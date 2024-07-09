@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import CommonLayout from "@/components/common-layout";
 import { ClerkProvider } from "@clerk/nextjs";
+import LocomotiveScroll from "@/components/Aceternity-Components/locomotive-scroll/locomotive-scroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <Suspense fallback={<Loading />}>
             <CommonLayout>{children}</CommonLayout>
           </Suspense>
+          <LocomotiveScroll />
         </body>
       </html>
     </ClerkProvider>

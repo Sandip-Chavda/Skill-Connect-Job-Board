@@ -1,4 +1,5 @@
 import { fetchProfileAction } from "@/actions";
+import { BackgroundGradientDemo } from "@/components/Aceternity-Components/background-moving-border/backgroundgradient";
 import { BentoGridThirdDemo } from "@/components/Aceternity-Components/Bento-Grid/hero-grid";
 import { ConnectWithUs } from "@/components/Aceternity-Components/connect-with-us/hero-grid";
 import HeroHeading from "@/components/Aceternity-Components/hero-heading/heroheading";
@@ -66,6 +67,14 @@ export default async function Home() {
         <div className="w-full h-full relative">
           <div className="flex flex-col-reverse lg:flex-row gap-10 mt-24">
             <ConnectWithUs />
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full h-full relative">
+        <div className="w-full h-full absolute -bottom-1">
+          <div className="mt-24">
+            <BackgroundGradientDemo />
           </div>
         </div>
       </section>

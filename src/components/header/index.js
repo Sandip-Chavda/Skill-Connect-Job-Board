@@ -7,6 +7,14 @@ import { RiMenuUnfold3Fill } from "react-icons/ri";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
+import { cn } from "@/utils/cn";
+
+const font = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["italic", "normal"],
+});
 
 const Header = ({ user, profileInfo }) => {
   const menuItems = [
@@ -64,7 +72,12 @@ const Header = ({ user, profileInfo }) => {
 
   return (
     <div>
-      <header className="flex h-16 w-full shrink-0 items-center">
+      <header
+        className={cn(
+          "flex h-16 w-full shrink-0 items-center font-normal",
+          font.className
+        )}
+      >
         {/* For mobile screen */}
         <Sheet>
           <SheetTrigger asChild>
@@ -74,10 +87,10 @@ const Header = ({ user, profileInfo }) => {
             </Button>
           </SheetTrigger>
           <SheetContent side="left">
-            <Link className="mr-6 hidden lg:flex" href={"#"}>
+            <Link className="mr-6 hidden lg:flex" href={"/"}>
               <h3>Skill Connect</h3>
             </Link>
-            <div className="grid gap-2 py-6">
+            <div className="grid gap-2 py-6 hover:underline">
               {menuItems.map((menuItem, i) =>
                 menuItem.show ? (
                   <Link
@@ -89,14 +102,20 @@ const Header = ({ user, profileInfo }) => {
                   </Link>
                 ) : null
               )}
-              <UserButton afterSignOutUrl="/" />
+              {/* <UserButton afterSignOutUrl="/" /> */}
             </div>
           </SheetContent>
         </Sheet>
+        <div className="flex md:hidden items-center ml-7">
+          <UserButton afterSignOutUrl="/" />
+        </div>
         {/* For mobile screen */}
 
         {/* Larger screen navbar */}
-        <Link className="hidden gap-1 lg:flex mr-6" href={"/"}>
+        <Link
+          className="hidden font-bold italic text-2xl gap-1 lg:flex mr-6"
+          href={"/"}
+        >
           <Image
             className="w-16"
             src="./logo.svg"
@@ -104,9 +123,7 @@ const Header = ({ user, profileInfo }) => {
             width={50}
             height={50}
           />
-          <span className="text-2xl font-bold bg-gradient-to-r from-red-600 via-green-500 to-blue-500 inline-block text-transparent bg-clip-text">
-            Skill Connect
-          </span>
+          <span className={("", font.className)}>Skill Connect</span>
         </Link>
 
         <nav className="ml-auto hidden lg:flex gap-6">
@@ -114,7 +131,7 @@ const Header = ({ user, profileInfo }) => {
             return menuItem.show ? (
               <Link
                 onClick={() => sessionStorage.removeItem("filterParams")}
-                className="group inline-flex h-9 w-max items-center rounded-md bg-white px-4 py-2 text-sm font-medium "
+                className="group inline-flex h-9 w-max items-center rounded-md bg-white px-4 py-2 text-sm font-medium hover:underline transition-all duration-300 hover:scale-110"
                 href={menuItem.path}
                 key={i}
               >
