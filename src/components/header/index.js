@@ -71,7 +71,7 @@ const Header = ({ user, profileInfo }) => {
   ];
 
   return (
-    <div>
+    <div data-aos="fade-down" data-aos-delay="1000">
       <header
         className={cn(
           "flex h-16 w-full shrink-0 items-center font-normal",

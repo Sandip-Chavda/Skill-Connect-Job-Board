@@ -1,4 +1,5 @@
 import { fetchProfileAction } from "@/actions";
+import AosAnimation from "@/components/Aceternity-Components/aos-animation/aos-helper";
 import { BackgroundGradientDemo } from "@/components/Aceternity-Components/background-moving-border/backgroundgradient";
 import { BentoGridThirdDemo } from "@/components/Aceternity-Components/Bento-Grid/hero-grid";
 import { ConnectWithUs } from "@/components/Aceternity-Components/connect-with-us/hero-grid";
@@ -22,6 +23,8 @@ export default async function Home() {
 
   return (
     <Fragment>
+      <AosAnimation />
+
       <section className="relative w-full h-full min-h-screen pb-10 ">
         <div className="w-full h-full relative">
           <div className="flex flex-col-reverse lg:flex-row gap-10 mt-16">
@@ -49,7 +52,6 @@ export default async function Home() {
       <section className="relative w-full h-full pb-10 ">
         <div className="w-full h-full relative">
           <div className="flex flex-col-reverse lg:flex-row gap-10 mt-24">
-            {/* <BentoGridThirdDemo /> */}
             <SkillHire />
           </div>
         </div>

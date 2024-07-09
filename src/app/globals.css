@@ -98,3 +98,8 @@ body::-webkit-scrollbar-thumb {
     animation-play-state: paused;
   }
 } */
+
+html,
+body:root {
+  overflow: hidden;
+}

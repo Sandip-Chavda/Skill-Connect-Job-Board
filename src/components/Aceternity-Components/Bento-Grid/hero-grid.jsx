@@ -1,13 +1,6 @@
 "use client";
 
 import React from "react";
-import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
@@ -17,6 +10,7 @@ import HeroButton from "../hero-button/button";
 import { FaGraduationCap } from "react-icons/fa6";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { MdConnectWithoutContact } from "react-icons/md";
+import { TextGenerateEffectDemo } from "../text-effect/text-effect";
 
 const font = Playfair_Display({
   subsets: ["latin"],
@@ -28,12 +22,15 @@ export function BentoGridThirdDemo() {
     <BentoGrid className="w-[calc(100%-50px)] mx-auto md:auto-rows-[22rem]">
       {items.map((item, i) => (
         <BentoGridItem
+          asChild
           key={i}
           title={item.title || ""}
           description={item.description || ""}
           header={item.header || ""}
           className={cn("[&>p:text-lg]", item.className)}
           icon={item.icon || ""}
+          dataaos={item.dataaos || ""}
+          dataaosdelay={item.dataaosdelay || ""}
         />
       ))}
     </BentoGrid>
@@ -83,7 +80,7 @@ const SkeletonOne = () => {
         whileHover="animate"
         className="text-5xl leading-snug"
       >
-        Connect Your Skill With The Your Dream Company
+        <TextGenerateEffectDemo />
       </motion.p>
       <HeroButton />
     </motion.div>
@@ -98,7 +95,7 @@ const SkeletonTwo = () => {
     animate: {
       width: "100%",
       transition: {
-        duration: 0.2,
+        duration: 0.3,
       },
     },
     hover: {
@@ -225,6 +222,7 @@ const SkeletonFour = () => {
         variants={first}
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       > */}
+
       <motion.div
         variants={first}
         className="h-full w-1/3 rounded-2xl bg-red-100 p-4 dark:bg-black dark:border-white/[0.1] border border-red-500 flex flex-col items-center justify-center"
@@ -420,6 +418,8 @@ const items = [
     header: <SkeletonOne />,
     className: "md:col-span-2 hover:shadow-none shadow-none border-none",
     // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    // dataaos: "null"
+    // dataaosdelay:"null"
   },
 
   {
@@ -436,6 +436,8 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1 bg-[#EFEEF3] cursor-pointer",
+    dataaos: "zoom-in-up",
+    // dataaosdelay:""
     // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -448,6 +450,8 @@ const items = [
     // ),
     header: <SkeletonThree />,
     className: "md:col-span-1 bg-black drak:bg-white",
+    dataaos: "fade-left",
+    dataaosdelay: "100",
     // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -467,6 +471,8 @@ const items = [
     ),
     header: <SkeletonFour />,
     className: "md:col-span-3 h-[430px] bg-black cursor-pointer",
+    dataaos: "fade-up",
+    dataaosdelay: "200",
     // icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -483,6 +489,8 @@ const items = [
     // ),
     header: <SkeletonFive />,
     className: "md:col-span-1 h-[430px] bg-black cursor-pointer",
+    dataaos: "fade-up",
+    dataaosdelay: "200",
     // icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
 ];

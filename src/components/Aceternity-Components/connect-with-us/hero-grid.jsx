@@ -40,6 +40,9 @@ export function ConnectWithUs() {
           header={item.header || ""}
           className={cn("[&>p:text-lg]", item.className)}
           icon={item.icon || ""}
+          dataaos={item.dataaos || ""}
+          dataaosdelay={item.dataaosdelay || ""}
+          dataaosduration={item.dataaosduration || ""}
         />
       ))}
     </BentoGrid>
@@ -498,6 +501,9 @@ const items = [
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1 bg-red-200",
+    dataaos: "fade-up",
+    dataaosdelay: "50",
+    dataaosduration: "300",
     // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -510,6 +516,9 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1 bg-lime-100 cursor-pointer",
+    dataaos: "fade-up",
+    dataaosdelay: "300",
+    dataaosduration: "300",
     // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
 
@@ -534,6 +543,9 @@ const items = [
     header: <SkeletonThree />,
     className: "md:col-span-2 bg-indigo-200 drak:bg-white",
     // icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    dataaos: "fade-up",
+    dataaosdelay: "500",
+    dataaosduration: "300",
   },
 
   // {

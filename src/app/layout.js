@@ -5,6 +5,7 @@ import Loading from "./loading";
 import CommonLayout from "@/components/common-layout";
 import { ClerkProvider } from "@clerk/nextjs";
 import LocomotiveScroll from "@/components/Aceternity-Components/locomotive-scroll/locomotive-scroll";
+import AosAnimation from "@/components/Aceternity-Components/aos-animation/aos-helper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
             <CommonLayout>{children}</CommonLayout>
           </Suspense>
           <LocomotiveScroll />
+          <AosAnimation />
         </body>
       </html>
     </ClerkProvider>

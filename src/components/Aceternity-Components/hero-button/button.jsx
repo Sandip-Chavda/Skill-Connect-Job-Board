@@ -13,6 +13,7 @@ const HeroButton = () => {
   return (
     <div className="flex space-x-7 !mt-10 ">
       <button
+        data-aos="fade-right"
         onClick={postJobButton}
         className="relative inline-flex h-9 overflow-hidden rounded-3xl p-[2px] focus:outline-none"
       >
@@ -23,6 +24,7 @@ const HeroButton = () => {
       </button>
 
       <button
+        data-aos="fade-left"
         onClick={postJobButton}
         className="relative inline-flex h-9 overflow-hidden rounded-3xl p-[2px] focus:outline-none"
       >

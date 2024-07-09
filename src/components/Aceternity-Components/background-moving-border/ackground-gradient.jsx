@@ -17,7 +17,11 @@ export const BackgroundGradient = ({
     },
   };
   return (
-    <div className={cn("relative p-[2px] group", containerClassName)}>
+    <div
+      data-aos="flip-up"
+      data-aos-duration="1000"
+      className={cn("relative p-[2px] group", containerClassName)}
+    >
       <motion.div
         variants={animate ? variants : undefined}
         initial={animate ? "initial" : undefined}

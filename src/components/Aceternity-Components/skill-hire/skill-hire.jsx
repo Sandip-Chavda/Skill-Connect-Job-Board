@@ -51,7 +51,12 @@ const SkillHire = () => {
 
         <div className="p-4 space-y-5 font-medium">
           {/*  */}
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-delay="50"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <IoMdTrendingUp className="w-11 h-11 p-1 rounded-xl bg-red-600 text-white" />
             </div>
@@ -61,7 +66,12 @@ const SkillHire = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="500"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <GiBookshelf className="w-11 h-11 p-1 rounded-xl bg-red-600 text-white" />
             </div>
@@ -71,7 +81,12 @@ const SkillHire = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="600"
+            data-aos-duration="500"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <MdOutlineWavingHand className="w-11 h-11 p-1 rounded-xl bg-red-600 text-white" />
             </div>
@@ -81,7 +96,12 @@ const SkillHire = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="500"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <BsStars className="w-11 h-11 p-1 rounded-xl bg-red-600 text-white" />
             </div>
@@ -123,7 +143,12 @@ const SkillHire = () => {
 
         <div className="p-4 space-y-5 font-medium">
           {/*  */}
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <MdOutlineGroups3 className="w-11 h-11 p-1 rounded-xl bg-indigo-600 text-white" />
             </div>
@@ -133,7 +158,12 @@ const SkillHire = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-aos-duration="500"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <FaPersonArrowUpFromLine className="w-11 h-11 p-1 rounded-xl bg-indigo-600 text-white" />
             </div>
@@ -143,7 +173,12 @@ const SkillHire = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos-delay="600"
+            data-aos="fade-left"
+            data-aos-duration="500"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <TbReportSearch className="w-11 h-11 p-1 rounded-xl bg-indigo-600 text-white" />
             </div>
@@ -153,7 +188,12 @@ const SkillHire = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl gap-x-5 items-center flex p-4">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="500"
+            data-aos-delay="800"
+            className="bg-white rounded-xl gap-x-5 items-center flex p-4"
+          >
             <div className="">
               <MdOutlineWorkspacePremium className="w-11 h-11 p-1 rounded-xl bg-indigo-600 text-white" />
             </div>

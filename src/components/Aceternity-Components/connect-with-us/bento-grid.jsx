@@ -21,9 +21,15 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  dataaos,
+  dataaosdelay,
+  dataaosduration,
 }) => {
   return (
     <div
+      data-aos={dataaos}
+      data-aos-delay={dataaosdelay}
+      data-aos-duration={dataaosduration}
       className={cn(
         "row-span-1 rounded-3xl group/bento hover:shadow-xl shadow-md transition duration-200 shadow-input dark:shadow-none p-4 border bg-white justify-between flex flex-col space-y-4",
         className
